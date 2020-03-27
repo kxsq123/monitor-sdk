@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>pv/uv收集测试</title>
+  <script src="../dist/monitor.min.js"></script>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+</head>
+<body>
+  <div id="app">
+    <h1>Hello PV!</h1>
+    <p>
+      <router-link to="/foo">Go to Foo</router-link>
+      <router-link to="/bar">Go to Bar</router-link>
+    </p>
+    <router-view></router-view>
+  </div>
+  <script>
+    
+    
+    const Foo = { template: '<div>foo</div>' }
+    const Bar = { template: '<div>bar</div>' }
+    const routes = [
+      { path: '/foo', component: Foo },
+      { path: '/bar', component: Bar }
+    ]
+    const router = new VueRouter({
+      routes
+    })
+    const app = new Vue({
+      mode: 'history',
+      router
+    }).$mount('#app')
+
+    var options = {
+      id: '5d396e850000059a7f53fca7',
+      baseUrl: 'http://localhost:9408/v3/monitor'
+      // baseUrl: 'http://testfemonitor.iyunxiao.com/v2/monitor'
+    }
+    
+    newMonitor.init(options);
+  </script>
+</body>
+</html>

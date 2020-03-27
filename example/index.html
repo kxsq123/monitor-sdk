@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<button onclick="clickHandler()">点我抛出异常</button>
+<button onclick="testApi()">put http报错</button>
+<button onclick="testApi2()">post http报错</button>
+</body>
+ <!-- <script src="../src/main.js" type="module"></script> -->
+<script src="../dist/monitor.min.js"></script>
+<script>
+  // monitor 配置文件
+  var options = {
+    id: '5d496741000005bd7e961769',
+    baseUrl: 'http://localhost:9408/v3/monitor'
+  }
+
+  // window.user = 'ass'
+
+  function clickHandler() {
+    testUnkonw();
+  }
+
+  function testApi() {
+
+    $.ajax({
+      type: 'PUT',
+      contentType: 'application/json; charset=utf-8',
+      url: "http://localhost:9408/monitor/add",
+      data: JSON.stringify([{ a: 1 }]),
+      dataType: 'json',
+      success: function (data) {
+        console.log(data);
+      }
+    });
+  }
+
+  function testApi2() {
+
+    $.ajax({
+      type: 'POST',
+      contentType: 'application/json; charset=utf-8',
+      url: "http://localhost:9408/monitor/add",
+      data: JSON.stringify([{ a: 1 }]),
+      dataType: 'json',
+      success: function (data) {
+        console.log(data);
+      }
+    });
+  }
+
+
+  // window.onload = function () {
+  newMonitor.init(options);
+  // }
+
+</script>
+  <script src="../test.js"></script>
+</html>
