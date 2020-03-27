@@ -1,6 +1,6 @@
 {
   "name": "monitor-sdk",
-  "version": "0.1.1",
+  "version": "1.2.2",
   "description": "前端错误收集性能检测 sdk",
   "main": "index.js",
   "scripts": {
