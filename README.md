@@ -157,7 +157,7 @@ dist
     // 页面的 refer，可以定位页面的入口
     "referrer": "", // 空字符串时为直接域名进入的；
     // 当前路由信息
-    "url" : "http://testboss.iyunxiao.com/dashboard/leader",
+    "url" : "http://xxx/testpage",
  
  
     // 错误信息
@@ -168,7 +168,7 @@ dist
         "message" : "Cannot read property 'setMonitor' of undefined"，
          
         // 以下 HTTP 请求错误特有 desc 字段
-        "api": "http://devmail.iyunxiao.com:9318/filter/flow/workflow/get_form?instanceId=000000000000000000018843"
+        "api": "http://xxx:9318/filter/flow/workflow/get_form?instanceId=000000000000000000018843"
         "code": "400 Bad Request"
         "message": "接口请求异常"
         "method": "GET"
@@ -179,7 +179,7 @@ dist
     "stack" : "TypeError: Cannot read property 'setMonitor' of undefined\n    at eval (webpack-internal:///576:40:26)",
  
     // Vue 组件内部特有字段
-    "vmName" : "component <NewFlowAppCenter> at /Users/shitakusei/Desktop/project/iyunxiao-bpm/src/views/NewFlowAppCenter/index.vue",
+    "vmName" : "component <NewFlowAppCenter> at /Users/shitakusei/Desktop/project/xxx/src/views/NewFlowAppCenter/index.vue",
     "info" : "beforeMount hook",
      
     // 资源收集错误特有字段
@@ -218,7 +218,7 @@ dist
     // 资源加载收集相关字段，
     "timings" : [
         {
-            "name" : "https://boss.iyunxiao.com/dist/54.eae41be4.js",
+            "name" : "https:/xxx/dist/54.eae41be4.js",
             "entryType" : "resource",
             "startTime" : 293.400000009569,
             "duration" : 1001.30000000354,
